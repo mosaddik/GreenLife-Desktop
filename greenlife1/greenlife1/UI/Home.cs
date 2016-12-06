@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using greenlife1.UI;
 using Greenlife1;
 
 namespace greenlife1
@@ -37,8 +38,8 @@ namespace greenlife1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DoctorHome doctorHome = new DoctorHome(PatientRegisterForm.doctorList, "abc123");
-            doctorHome.Show();
+            DoctorLoginForm loginForm = new DoctorLoginForm();
+            loginForm.Show();
             
         
         }

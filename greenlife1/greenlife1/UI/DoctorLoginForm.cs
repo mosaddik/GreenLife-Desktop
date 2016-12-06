@@ -35,6 +35,11 @@ namespace greenlife1.UI
 
         }
 
+        private void DoctorLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
     
     }
 }

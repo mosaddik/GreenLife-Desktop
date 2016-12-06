@@ -89,7 +89,7 @@ namespace greenlife1.BLL
 
             foreach (var doctor in doctorGetaway.GetAllDoctor())
             {
-                if (doctor.Name !=null && doctor.Password != null && doctor.Name == newDoctor.Name && doctor.Password == newDoctor.Password)
+                if (doctor.DoctorId !=null && doctor.Password != null && doctor.DoctorId == newDoctor.DoctorId && doctor.Password == newDoctor.Password)
                 {
                     isLogin = true;
                 }

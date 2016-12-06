@@ -91,7 +91,7 @@ namespace greenlife1.DAL
                     doc.Email = Convert.ToString(reader["email"]);
                     doc.Qualification = Convert.ToString(reader["qualification"]);
                     doc.Image.Name = Convert.ToString(reader["image"]);
-
+                    doc.Password = Convert.ToString(reader["password"]);
                     doctorList.Add(doc);
                 }
                 

@@ -23,6 +23,7 @@ namespace greenlife1
             InitializeComponent();
             this.DoctorWithpatientQueue = doctorWithpatientQueue;
             this.DoctorId = doctorId;
+            
             doctorManager.ViewPatientQueue(waitingPatientGrid, doctorWithpatientQueue, doctorId);
         }
         private void DoctorHome_Load(object sender, EventArgs e)

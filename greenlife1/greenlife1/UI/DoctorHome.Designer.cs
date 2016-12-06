@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.doctorHomePanel = new System.Windows.Forms.Panel();
             this.waitingPatientGrid = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.waitingPatientGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,22 +59,11 @@
             this.waitingPatientGrid.Size = new System.Drawing.Size(355, 399);
             this.waitingPatientGrid.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(860, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // DoctorHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 509);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.waitingPatientGrid);
             this.Controls.Add(this.doctorHomePanel);
             this.Controls.Add(this.label1);
@@ -93,7 +81,6 @@
         private System.Windows.Forms.Panel doctorHomePanel;
         private System.Windows.Forms.DataGridView waitingPatientGrid;
         internal System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
 
     }
 }
