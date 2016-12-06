@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.assignGrid = new System.Windows.Forms.DataGridView();
             this.formLabel = new System.Windows.Forms.Label();
             this.problemRichTextBox = new System.Windows.Forms.RichTextBox();
             this.registerButton = new System.Windows.Forms.Button();
@@ -52,11 +54,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.femaleRadio = new System.Windows.Forms.RadioButton();
             this.maleRadio = new System.Windows.Forms.RadioButton();
-            this.assignGrid = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.assignGrid)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,7 +88,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(972, 508);
             this.panel1.TabIndex = 0;
-          //  this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(487, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Select Doctor";
+            // 
+            // assignGrid
+            // 
+            this.assignGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.assignGrid.Location = new System.Drawing.Point(491, 133);
+            this.assignGrid.Name = "assignGrid";
+            this.assignGrid.Size = new System.Drawing.Size(471, 264);
+            this.assignGrid.TabIndex = 1;
+            this.assignGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.assignGrid_CellClick);
             // 
             // formLabel
             // 
@@ -292,25 +311,6 @@
             this.maleRadio.Text = "Male";
             this.maleRadio.UseVisualStyleBackColor = true;
             // 
-            // assignGrid
-            // 
-            this.assignGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.assignGrid.Location = new System.Drawing.Point(491, 133);
-            this.assignGrid.Name = "assignGrid";
-            this.assignGrid.Size = new System.Drawing.Size(471, 264);
-            this.assignGrid.TabIndex = 1;
-            this.assignGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.assignGrid_CellClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(487, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Select Doctor";
-            // 
             // PatientRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,9 +322,9 @@
             this.Load += new System.EventHandler(this.PatientRegisterForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.assignGrid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.assignGrid)).EndInit();
             this.ResumeLayout(false);
 
         }

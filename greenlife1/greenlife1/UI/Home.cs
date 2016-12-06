@@ -36,10 +36,16 @@ namespace greenlife1
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {   
-           
+        {
+            DoctorHome doctorHome = new DoctorHome(PatientRegisterForm.doctorList, "abc123");
+            doctorHome.Show();
             
         
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

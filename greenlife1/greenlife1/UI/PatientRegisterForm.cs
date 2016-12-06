@@ -161,16 +161,17 @@ namespace Greenlife1
         private string checkPatid = " ";
        
         
-       public List<Doctor> doctorList =  new List<Doctor>();
+       public static List<Doctor> doctorList =  new List<Doctor>();
         private void assignGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+      
             //adding to Queue 
-            if (e.ColumnIndex == 4)
+            if (e.ColumnIndex == 0)
             {
                     
                     
-                   string doctorid  =  assignGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                   string doctorid  =  assignGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
 
                 if (doctorid != checkDocid)
                 {
@@ -192,6 +193,11 @@ namespace Greenlife1
             }
             
             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
        
