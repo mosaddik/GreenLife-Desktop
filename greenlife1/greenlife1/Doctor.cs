@@ -11,7 +11,7 @@ namespace greenlife1
     {
         public int ID { set; get; }
         public String Name { set; get; }
-
+        public String Password { set; get; }
         public string DoctorId { set; get; }
         public Image Image { set; get; }
         public String Gender { set; get; }

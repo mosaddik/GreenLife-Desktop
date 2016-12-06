@@ -54,6 +54,7 @@ namespace greenlife1.DAL
                     doc.NID = Convert.ToString(reader["nid"]);
                     doc.Email = Convert.ToString(reader["email"]);
                     doc.Image.Name = Convert.ToString(reader["image"]);
+                    doc.Password = Convert.ToString(reader["password"]);
                     
 
 

@@ -82,6 +82,23 @@ namespace greenlife1.BLL
                 waitingPatientGrid.DataSource = table;
             }
         }
+
+        public bool Login(Doctor newDoctor)
+        {
+            bool isLogin = false;
+
+            foreach (var doctor in doctorGetaway.GetAllDoctor())
+            {
+                if (doctor.Name !=null && doctor.Password != null && doctor.Name == newDoctor.Name && doctor.Password == newDoctor.Password)
+                {
+                    isLogin = true;
+                }
+                
+            }
+            
+
+            return isLogin;
+        }
         
        
     }
