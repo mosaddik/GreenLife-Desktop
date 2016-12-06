@@ -40,3 +40,15 @@ E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.Generate
 E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\greenlife1.exe.config
 E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.exe
 E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.pdb
+E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\greenlife1.exe
+E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\greenlife1.pdb
+E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\Spire.Barcode.dll
+E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\Spire.Barcode.xml
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.csprojResolveAssemblyReference.cache
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.AssignDoctorForm.resources
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorRegisterForm.resources
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorHome.resources
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.Home.resources
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\Greenlife1.PatientRegisterForm.resources
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.Properties.Resources.resources
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.GenerateResource.Cache

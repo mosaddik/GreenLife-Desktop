@@ -10,7 +10,7 @@ namespace greenlife1.DAL
 {
     class PatientGetaway
     {
-        string connectionString = "Server=MOSADDIK-PC\\SQLEXPRESS;Database=greenlife;Integrated Security=true";
+        private string connectionString = "Data Source=192.168.0.103,49170;Initial Catalog=greenlife;User=sa; Password=123;";
 
 
         public bool Save(Patient patient)
