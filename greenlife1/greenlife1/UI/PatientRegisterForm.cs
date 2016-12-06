@@ -124,10 +124,7 @@ namespace Greenlife1
             
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         
         private void printDocument1_PrintPage(System.Object sender,
@@ -197,20 +194,11 @@ namespace Greenlife1
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var dochome = new DoctorHome(doctorList, "abc123");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
        
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-       
-        }
+      
+
+     
 
     }
 }

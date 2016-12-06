@@ -72,32 +72,10 @@ namespace greenlife1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private Doctor doctor;
         private string doctorImage;
@@ -158,7 +136,7 @@ namespace greenlife1
                     // SpecilityTextBox.Text = "";
                     imageTextBox.Text = String.Empty;
                     phoneTextBox.Text = String.Empty;
-                    
+
                 }
                 else
                 {
@@ -166,27 +144,14 @@ namespace greenlife1
                 }
 
 
-
-
-
-
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
-
-
-
-
-
         }
 
-        private void docotorRegistrationLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
@@ -195,20 +160,6 @@ namespace greenlife1
             doctorImage = openFile.SafeFileName;
         }
 
-        private void nameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void doctorDatePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         
         private bool colRemoved = false;
@@ -224,13 +175,7 @@ namespace greenlife1
             schedule.FromTime =startTime.Value.TimeOfDay;
             schedule.ToTime = endTime.Value.TimeOfDay;
             schedule.Doctor.DoctorId = docId;
-            
-
-
-      
-
-           
-
+          
                 
                 //Add first item
                 arr[0] = schedule.Day;
@@ -239,17 +184,10 @@ namespace greenlife1
                 itm = new ListViewItem(arr);
                 listView1.Items.Add(itm);
                 schedules.Add(schedule);
-            
-
-
-
-
+         
         }
 
-        private void doctorSheduleGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
     }
 }

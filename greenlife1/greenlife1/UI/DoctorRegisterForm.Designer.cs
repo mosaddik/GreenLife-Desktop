@@ -107,7 +107,7 @@
             this.doctorPanel.Name = "doctorPanel";
             this.doctorPanel.Size = new System.Drawing.Size(987, 471);
             this.doctorPanel.TabIndex = 0;
-            this.doctorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            //this.doctorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // listView1
             // 
@@ -209,7 +209,7 @@
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(328, 20);
             this.phoneBox.TabIndex = 24;
-            this.phoneBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+           // this.phoneBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // phoneTextBox
             // 
@@ -239,7 +239,7 @@
             this.docotorRegistrationLabel.Size = new System.Drawing.Size(267, 31);
             this.docotorRegistrationLabel.TabIndex = 20;
             this.docotorRegistrationLabel.Text = "Doctor Registration";
-            this.docotorRegistrationLabel.Click += new System.EventHandler(this.docotorRegistrationLabel_Click);
+           // this.docotorRegistrationLabel.Click += new System.EventHandler(this.docotorRegistrationLabel_Click);
             // 
             // registerButton
             // 
@@ -258,7 +258,7 @@
             this.doctorDatePicker.Name = "doctorDatePicker";
             this.doctorDatePicker.Size = new System.Drawing.Size(200, 20);
             this.doctorDatePicker.TabIndex = 18;
-            this.doctorDatePicker.ValueChanged += new System.EventHandler(this.doctorDatePicker_ValueChanged);
+            //this.doctorDatePicker.ValueChanged += new System.EventHandler(this.doctorDatePicker_ValueChanged);
             // 
             // panel1
             // 
@@ -279,7 +279,7 @@
             this.femaleRadio.TabStop = true;
             this.femaleRadio.Text = "Female";
             this.femaleRadio.UseVisualStyleBackColor = true;
-            this.femaleRadio.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            //this.femaleRadio.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // maleRadio
             // 
@@ -319,7 +319,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(328, 20);
             this.nameTextBox.TabIndex = 11;
-            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
+            //this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // imageTextBox
             // 
