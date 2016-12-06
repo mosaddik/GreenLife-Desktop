@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,6 +57,30 @@ namespace greenlife1.BLL
 
 
 
+        }
+
+        public void ViewPatientQueue(DataGridView waitingPatientGrid , List<Doctor> doctorWithPatientQueue , string doctorId)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Gender", typeof(string));
+            table.Columns.Add("Problems", typeof(string));
+            waitingPatientGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
+
+            foreach (var pQueue in doctorWithPatientQueue)
+            {
+                if (pQueue.DoctorId == doctorId)
+                {
+
+                    foreach (var patient in pQueue.PatientQueue)
+                    {
+                        table.Rows.Add(patient.Name, patient.Gender, patient.Problem);
+                    }
+                }
+                waitingPatientGrid.DataSource = table;
+            }
         }
         
        

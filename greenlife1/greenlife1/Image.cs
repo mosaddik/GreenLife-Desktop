@@ -12,8 +12,6 @@ namespace greenlife1
         public int ID { get; set; }
         public string Name { get; set; }
 
-        
-
         public void Open()
         {
            OpenFileDialog open = new OpenFileDialog();

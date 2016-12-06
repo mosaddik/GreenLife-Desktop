@@ -22,7 +22,7 @@ namespace Greenlife1
 {
     public partial class PatientRegisterForm : Form
     {
- 
+       
         private PatientManager patientManager = new PatientManager();
         private  DoctorManager doctorManager =  new DoctorManager();
         private Patient patient;
@@ -159,15 +159,16 @@ namespace Greenlife1
             //memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
 
         }
-
         private Doctor doctor;
-
-        Queue<Patient> patientQueue =  new Queue<Patient>();
         private string checkDocid = " ";
         private string checkPatid = " ";
+       
+        
        public List<Doctor> doctorList =  new List<Doctor>();
         private void assignGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            //adding to Queue 
             if (e.ColumnIndex == 4)
             {
                     
@@ -198,26 +199,17 @@ namespace Greenlife1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var dochome = new DoctorHome();
-            dochome.QueueData = doctorList;
-            dochome.doctor = "abc123";
-            dochome.Show();
+            var dochome = new DoctorHome(doctorList, "abc123");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var dochome = new DoctorHome();
-            dochome.QueueData = doctorList;
-            dochome.doctor = "32123";
-            dochome.Show();
+       
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var dochome = new DoctorHome();
-            dochome.QueueData = doctorList;
-            dochome.doctor = "1635";
-            dochome.Show();
+       
         }
 
     }
