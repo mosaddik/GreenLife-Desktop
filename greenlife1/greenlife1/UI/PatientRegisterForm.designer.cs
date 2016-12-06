@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.assignGrid = new System.Windows.Forms.DataGridView();
+            this.AssignDoctorButton = new System.Windows.Forms.Button();
             this.formLabel = new System.Windows.Forms.Label();
             this.problemRichTextBox = new System.Windows.Forms.RichTextBox();
             this.registerButton = new System.Windows.Forms.Button();
@@ -55,14 +54,12 @@
             this.femaleRadio = new System.Windows.Forms.RadioButton();
             this.maleRadio = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.assignGrid)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.assignGrid);
+            this.panel1.Controls.Add(this.AssignDoctorButton);
             this.panel1.Controls.Add(this.formLabel);
             this.panel1.Controls.Add(this.problemRichTextBox);
             this.panel1.Controls.Add(this.registerButton);
@@ -90,30 +87,21 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label1
+            // AssignDoctorButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(487, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Select Doctor";
-            // 
-            // assignGrid
-            // 
-            this.assignGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.assignGrid.Location = new System.Drawing.Point(491, 133);
-            this.assignGrid.Name = "assignGrid";
-            this.assignGrid.Size = new System.Drawing.Size(471, 264);
-            this.assignGrid.TabIndex = 1;
-            this.assignGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.assignGrid_CellClick);
+            this.AssignDoctorButton.Location = new System.Drawing.Point(462, 458);
+            this.AssignDoctorButton.Name = "AssignDoctorButton";
+            this.AssignDoctorButton.Size = new System.Drawing.Size(109, 24);
+            this.AssignDoctorButton.TabIndex = 7;
+            this.AssignDoctorButton.Text = "Assign Doctor";
+            this.AssignDoctorButton.UseVisualStyleBackColor = true;
+            this.AssignDoctorButton.Click += new System.EventHandler(this.AssignDoctorButton_Click);
             // 
             // formLabel
             // 
             this.formLabel.AutoSize = true;
             this.formLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formLabel.Location = new System.Drawing.Point(360, 23);
+            this.formLabel.Location = new System.Drawing.Point(485, 19);
             this.formLabel.Name = "formLabel";
             this.formLabel.Size = new System.Drawing.Size(208, 31);
             this.formLabel.TabIndex = 5;
@@ -121,7 +109,7 @@
             // 
             // problemRichTextBox
             // 
-            this.problemRichTextBox.Location = new System.Drawing.Point(143, 351);
+            this.problemRichTextBox.Location = new System.Drawing.Point(432, 344);
             this.problemRichTextBox.Name = "problemRichTextBox";
             this.problemRichTextBox.Size = new System.Drawing.Size(326, 46);
             this.problemRichTextBox.TabIndex = 4;
@@ -129,9 +117,9 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(446, 449);
+            this.registerButton.Location = new System.Drawing.Point(610, 458);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(122, 46);
+            this.registerButton.Size = new System.Drawing.Size(115, 24);
             this.registerButton.TabIndex = 3;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
@@ -139,7 +127,7 @@
             // 
             // browseButton
             // 
-            this.browseButton.Location = new System.Drawing.Point(394, 233);
+            this.browseButton.Location = new System.Drawing.Point(683, 226);
             this.browseButton.Name = "browseButton";
             this.browseButton.Size = new System.Drawing.Size(75, 23);
             this.browseButton.TabIndex = 3;
@@ -149,28 +137,28 @@
             // 
             // patientDatePicker
             // 
-            this.patientDatePicker.Location = new System.Drawing.Point(143, 259);
+            this.patientDatePicker.Location = new System.Drawing.Point(432, 252);
             this.patientDatePicker.Name = "patientDatePicker";
             this.patientDatePicker.Size = new System.Drawing.Size(326, 20);
             this.patientDatePicker.TabIndex = 2;
             // 
             // NIDTextBox
             // 
-            this.NIDTextBox.Location = new System.Drawing.Point(143, 313);
+            this.NIDTextBox.Location = new System.Drawing.Point(432, 306);
             this.NIDTextBox.Name = "NIDTextBox";
             this.NIDTextBox.Size = new System.Drawing.Size(326, 20);
             this.NIDTextBox.TabIndex = 1;
             // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(143, 285);
+            this.addressTextBox.Location = new System.Drawing.Point(432, 278);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(326, 20);
             this.addressTextBox.TabIndex = 1;
             // 
             // imageTextBox
             // 
-            this.imageTextBox.Location = new System.Drawing.Point(143, 233);
+            this.imageTextBox.Location = new System.Drawing.Point(432, 226);
             this.imageTextBox.Name = "imageTextBox";
             this.imageTextBox.Size = new System.Drawing.Size(245, 20);
             this.imageTextBox.TabIndex = 1;
@@ -179,7 +167,7 @@
             // NIDLabel
             // 
             this.NIDLabel.AutoSize = true;
-            this.NIDLabel.Location = new System.Drawing.Point(81, 316);
+            this.NIDLabel.Location = new System.Drawing.Point(370, 309);
             this.NIDLabel.Name = "NIDLabel";
             this.NIDLabel.Size = new System.Drawing.Size(26, 13);
             this.NIDLabel.TabIndex = 0;
@@ -187,21 +175,21 @@
             // 
             // phoneTextBox
             // 
-            this.phoneTextBox.Location = new System.Drawing.Point(143, 197);
+            this.phoneTextBox.Location = new System.Drawing.Point(432, 190);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(326, 20);
             this.phoneTextBox.TabIndex = 1;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(144, 171);
+            this.emailTextBox.Location = new System.Drawing.Point(433, 164);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(325, 20);
             this.emailTextBox.TabIndex = 1;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(144, 90);
+            this.nameTextBox.Location = new System.Drawing.Point(433, 83);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(325, 20);
             this.nameTextBox.TabIndex = 1;
@@ -209,7 +197,7 @@
             // problemLabel
             // 
             this.problemLabel.AutoSize = true;
-            this.problemLabel.Location = new System.Drawing.Point(81, 357);
+            this.problemLabel.Location = new System.Drawing.Point(370, 350);
             this.problemLabel.Name = "problemLabel";
             this.problemLabel.Size = new System.Drawing.Size(45, 13);
             this.problemLabel.TabIndex = 0;
@@ -218,7 +206,7 @@
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(81, 288);
+            this.addressLabel.Location = new System.Drawing.Point(370, 281);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(45, 13);
             this.addressLabel.TabIndex = 0;
@@ -227,7 +215,7 @@
             // DOBLabel
             // 
             this.DOBLabel.AutoSize = true;
-            this.DOBLabel.Location = new System.Drawing.Point(55, 259);
+            this.DOBLabel.Location = new System.Drawing.Point(344, 252);
             this.DOBLabel.Name = "DOBLabel";
             this.DOBLabel.Size = new System.Drawing.Size(68, 13);
             this.DOBLabel.TabIndex = 0;
@@ -236,17 +224,16 @@
             // phoneLabel
             // 
             this.phoneLabel.AutoSize = true;
-            this.phoneLabel.Location = new System.Drawing.Point(85, 200);
+            this.phoneLabel.Location = new System.Drawing.Point(374, 193);
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(38, 13);
             this.phoneLabel.TabIndex = 0;
             this.phoneLabel.Text = "Phone";
-            this.phoneLabel.Click += new System.EventHandler(this.emailLabel_Click);
             // 
             // imageLabel
             // 
             this.imageLabel.AutoSize = true;
-            this.imageLabel.Location = new System.Drawing.Point(81, 233);
+            this.imageLabel.Location = new System.Drawing.Point(370, 226);
             this.imageLabel.Name = "imageLabel";
             this.imageLabel.Size = new System.Drawing.Size(36, 13);
             this.imageLabel.TabIndex = 0;
@@ -255,17 +242,16 @@
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(86, 174);
+            this.emailLabel.Location = new System.Drawing.Point(375, 167);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(32, 13);
             this.emailLabel.TabIndex = 0;
             this.emailLabel.Text = "Email";
-            this.emailLabel.Click += new System.EventHandler(this.emailLabel_Click);
             // 
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
-            this.genderLabel.Location = new System.Drawing.Point(82, 116);
+            this.genderLabel.Location = new System.Drawing.Point(371, 109);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(42, 13);
             this.genderLabel.TabIndex = 0;
@@ -274,7 +260,7 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(82, 93);
+            this.nameLabel.Location = new System.Drawing.Point(371, 86);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(35, 13);
             this.nameLabel.TabIndex = 0;
@@ -284,7 +270,7 @@
             // 
             this.panel2.Controls.Add(this.femaleRadio);
             this.panel2.Controls.Add(this.maleRadio);
-            this.panel2.Location = new System.Drawing.Point(144, 118);
+            this.panel2.Location = new System.Drawing.Point(433, 111);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(325, 26);
             this.panel2.TabIndex = 0;
@@ -322,7 +308,6 @@
             this.Load += new System.EventHandler(this.PatientRegisterForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.assignGrid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -355,8 +340,7 @@
         private System.Windows.Forms.Label formLabel;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Label phoneLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView assignGrid;
+        private System.Windows.Forms.Button AssignDoctorButton;
     }
 }
 

@@ -52,3 +52,4 @@ E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\Greenlife1.PatientRegister
 E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.Properties.Resources.resources
 E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.GenerateResource.Cache
 E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.UI.DoctorLoginForm.resources
+E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.UI.AssignDoctor.resources
