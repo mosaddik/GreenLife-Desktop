@@ -24,7 +24,7 @@ namespace greenlife1.UI
         private void loginButton_Click(object sender, EventArgs e)
         {
 
-            var data = patientQueueManager.GetToDayQueue();
+          
 
             Doctor doctor =  new Doctor();
             doctor.DoctorId = nameBox.Text;
@@ -33,7 +33,8 @@ namespace greenlife1.UI
             if (doctorManager.Login(doctor))
             {
                  var loginedDoctor = doctorManager.GetById(doctor);
-                 DoctorHome doctorHome =  new DoctorHome(PatientRegisterForm.doctorList,loginedDoctor.DoctorId);
+                 DoctorHome doctorHome =  new DoctorHome(loginedDoctor.DoctorId);
+                 this.Close();
                  doctorHome.Show();
             }
 

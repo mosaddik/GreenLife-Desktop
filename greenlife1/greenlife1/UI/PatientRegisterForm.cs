@@ -77,7 +77,11 @@ namespace Greenlife1
                         printDocument.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
                         CaptureScreen();
                         printDocument.Print();
-
+                        AssignDoctor assignDoctor = new AssignDoctor(patient);
+                        MessageBox.Show("Registation Successfull , Please Assign to Doctor Now");
+                        this.Close();
+                        assignDoctor.Show();
+                      
 
 
 
@@ -85,6 +89,9 @@ namespace Greenlife1
                     if (dialogResult == DialogResult.No)
                     {
                         MessageBox.Show("Registation Successfull , Please Assign to Doctor Now");
+                        AssignDoctor assignDoctor = new AssignDoctor(patient);
+                        this.Close();
+                        assignDoctor.Show();
                     }
                     nameTextBox.Text = "";
                     addressTextBox.Text = "";
@@ -95,6 +102,7 @@ namespace Greenlife1
                     problemRichTextBox.Text = "";
                     phoneTextBox.Text = "";
                     imageTextBox.Text = String.Empty;
+
 
                 }
             }
