@@ -21,9 +21,9 @@ namespace greenlife1.DAL
 
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "INSERT INTO [Patient_Queue]  (docotor_id,patient_id,queue_no,date) values ('" +
+            string query = "INSERT INTO [Patient_Queue]  (doctor_id,patient_id,queue_no,date) values ('" +
                            queue.Doctor.DoctorId + "','" + queue.Patient.PatientId + "','" + queue.QueueNo + "','" +
-                           queue.PatientEntryDateTime + "') ";
+                           queue.PatientEntryDateTime.Date.ToString("dd-MM-yyyy") + "') ";
             ;
             SqlCommand command = new SqlCommand(query, connection);
             int rowsEffected = command.ExecuteNonQuery();
@@ -120,7 +120,7 @@ namespace greenlife1.DAL
             return patientQueues;
         }
 
-        public PatientQueue GetMaxQueueNoOfToDay()
+        public PatientQueue GetMaxQueueNoOfToDayOfADocotor(string doctorId)
         {
             try
             {
@@ -128,7 +128,7 @@ namespace greenlife1.DAL
                 connection.Open();
                 string query = "select MAX(queue_no) from [Patient_Queue] where date BETWEEN '" +
                                DateTime.Today.ToString("dd-MM-yyyy") + "' AND  '" +
-                               DateTime.Today.AddDays(1).AddSeconds(-1).ToString("dd-MM-yyyy") + "' ";
+                               DateTime.Today.AddDays(1).AddSeconds(-1).ToString("dd-MM-yyyy") + "' AND doctor_id='"+doctorId+"'";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 PatientQueue patientQueue = null;

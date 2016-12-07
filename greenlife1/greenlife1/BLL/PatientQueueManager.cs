@@ -33,18 +33,23 @@ namespace greenlife1.BLL
             return list;
         }
 
-        public string GenarateQueueNo()
+        public string GenarateQueueNo(string docotorId)
         {
-            PatientQueue patientQueue = queueGetaway.GetMaxQueueNoOfToDay();
-           string patientQueueno =  (Convert.ToInt32(patientQueue.QueueNo) + 1).ToString();
-            
-            if (queueGetaway.GetMaxQueueNoOfToDay() == null)
-            {
 
-                patientQueueno = "1";
+            PatientQueue patientQueue = new PatientQueue() {QueueNo = "1"};
+
+            string queueNo = patientQueue.QueueNo;
+
+            if (queueGetaway.GetMaxQueueNoOfToDayOfADocotor(docotorId).QueueNo != "")
+            {
+                patientQueue = queueGetaway.GetMaxQueueNoOfToDayOfADocotor(docotorId);
+                queueNo = (Convert.ToInt32(patientQueue.QueueNo)+1).ToString();
             }
-            
-            return patientQueueno;   
+
+
+            return queueNo;
+
+
         }
 
     }

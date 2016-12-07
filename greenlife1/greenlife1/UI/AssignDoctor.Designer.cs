@@ -36,6 +36,8 @@
             this.patientNameLabel = new System.Windows.Forms.Label();
             this.patientPhoneLabel = new System.Windows.Forms.Label();
             this.patientProblemLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.QueueNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +85,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(216, 201);
+            this.dataGridView1.Location = new System.Drawing.Point(219, 213);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(523, 286);
             this.dataGridView1.TabIndex = 4;
@@ -115,11 +117,31 @@
             this.patientProblemLabel.TabIndex = 7;
             this.patientProblemLabel.Text = "label7";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(216, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Queue No";
+            // 
+            // QueueNo
+            // 
+            this.QueueNo.AutoSize = true;
+            this.QueueNo.Location = new System.Drawing.Point(349, 188);
+            this.QueueNo.Name = "QueueNo";
+            this.QueueNo.Size = new System.Drawing.Size(0, 13);
+            this.QueueNo.TabIndex = 9;
+            // 
             // AssignDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 523);
+            this.Controls.Add(this.QueueNo);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.patientProblemLabel);
             this.Controls.Add(this.patientPhoneLabel);
             this.Controls.Add(this.patientNameLabel);
@@ -147,5 +169,7 @@
         private System.Windows.Forms.Label patientNameLabel;
         private System.Windows.Forms.Label patientPhoneLabel;
         private System.Windows.Forms.Label patientProblemLabel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label QueueNo;
     }
 }

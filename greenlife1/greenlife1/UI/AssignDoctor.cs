@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using greenlife1.BLL;
+using Greenlife1;
 
 namespace greenlife1.UI
 {
@@ -44,8 +45,16 @@ namespace greenlife1.UI
                 queue.Patient = Patient;
                 queue.Doctor.DoctorId = doctorid;
                 queue.PatientEntryDateTime = DateTime.Now;
-                queue.QueueNo = patientQueueManager.GenarateQueueNo();
+                queue.QueueNo = patientQueueManager.GenarateQueueNo(doctorid);
                 patientQueueManager.AddToQueue(queue);
+                DialogResult dialogResult = MessageBox.Show("Patient Queue No is "+ queue.QueueNo);
+                this.Close();
+                if (dialogResult == DialogResult.OK)
+                {
+                    new PatientRegisterForm().ShowDialog();
+
+                }
+
             }
         }
     }

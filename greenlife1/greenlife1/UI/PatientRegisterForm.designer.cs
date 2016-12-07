@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AssignDoctorButton = new System.Windows.Forms.Button();
             this.formLabel = new System.Windows.Forms.Label();
             this.problemRichTextBox = new System.Windows.Forms.RichTextBox();
             this.registerButton = new System.Windows.Forms.Button();
@@ -59,7 +58,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.AssignDoctorButton);
             this.panel1.Controls.Add(this.formLabel);
             this.panel1.Controls.Add(this.problemRichTextBox);
             this.panel1.Controls.Add(this.registerButton);
@@ -87,16 +85,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // AssignDoctorButton
-            // 
-            this.AssignDoctorButton.Location = new System.Drawing.Point(462, 458);
-            this.AssignDoctorButton.Name = "AssignDoctorButton";
-            this.AssignDoctorButton.Size = new System.Drawing.Size(109, 24);
-            this.AssignDoctorButton.TabIndex = 7;
-            this.AssignDoctorButton.Text = "Assign Doctor";
-            this.AssignDoctorButton.UseVisualStyleBackColor = true;
-            this.AssignDoctorButton.Click += new System.EventHandler(this.AssignDoctorButton_Click);
-            // 
             // formLabel
             // 
             this.formLabel.AutoSize = true;
@@ -117,7 +105,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(610, 458);
+            this.registerButton.Location = new System.Drawing.Point(527, 443);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(115, 24);
             this.registerButton.TabIndex = 3;
@@ -340,7 +328,6 @@
         private System.Windows.Forms.Label formLabel;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Label phoneLabel;
-        private System.Windows.Forms.Button AssignDoctorButton;
     }
 }
 
