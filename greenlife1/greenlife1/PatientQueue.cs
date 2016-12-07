@@ -9,9 +9,16 @@ namespace greenlife1
     class PatientQueue
     {
         public int Id { get; set; }
-        public string  DoctorId { get; set; }
-        public string PatientId { get; set; }
+        public Doctor  Doctor { get; set; }
+        public Patient Patient { get; set; }
         public string QueueNo { get; set; }
         public DateTime PatientEntryDateTime  { get; set; }
+
+        public PatientQueue()
+        {
+            this.Doctor =  new Doctor();
+            this.Patient = new Patient();
+        }
+    
     }
 }

@@ -84,7 +84,7 @@ namespace Greenlife1
                     }
                     if (dialogResult == DialogResult.No)
                     {
-                        MessageBox.Show("No");
+                        MessageBox.Show("Registation Successfull , Please Assign to Doctor Now");
                     }
                     nameTextBox.Text = "";
                     addressTextBox.Text = "";

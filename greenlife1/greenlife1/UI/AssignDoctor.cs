@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using greenlife1.BLL;
 
 namespace greenlife1.UI
 {
     public partial class AssignDoctor : Form
     {
+       
         public  Patient Patient { get; set; }
         public AssignDoctor()
         {
@@ -31,6 +33,20 @@ namespace greenlife1.UI
             patientPhoneLabel.Text = this.Patient.Phone;
             patientProblemLabel.Text = this.Patient.Problem;
             Patient.GridviewLoad(dataGridView1);
+        }
+        PatientQueueManager patientQueueManager =  new PatientQueueManager();
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                string doctorid = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                PatientQueue queue = new PatientQueue();
+                queue.Patient = Patient;
+                queue.Doctor.DoctorId = doctorid;
+                queue.PatientEntryDateTime = DateTime.Now;
+                queue.QueueNo = patientQueueManager.GenarateQueueNo();
+                patientQueueManager.AddToQueue(queue);
+            }
         }
     }
 }

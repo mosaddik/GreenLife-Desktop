@@ -15,6 +15,7 @@ namespace greenlife1.UI
     public partial class DoctorLoginForm : Form
     {
         DoctorManager doctorManager =  new DoctorManager();
+        PatientQueueManager patientQueueManager =  new PatientQueueManager();
         public DoctorLoginForm()
         {
             InitializeComponent();
@@ -22,6 +23,9 @@ namespace greenlife1.UI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+
+            var data = patientQueueManager.GetToDayQueue();
+
             Doctor doctor =  new Doctor();
             doctor.DoctorId = nameBox.Text;
             doctor.Password = passwordBox.Text;

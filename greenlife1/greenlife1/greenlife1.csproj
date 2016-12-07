@@ -49,13 +49,16 @@
   <ItemGroup>
     <Compile Include="BLL\DoctorManager.cs" />
     <Compile Include="BLL\PatientManager.cs" />
+    <Compile Include="BLL\PatientQueueManager.cs" />
     <Compile Include="BLL\ScheduleManager.cs" />
     <Compile Include="BLL\SpecialityManager.cs" />
     <Compile Include="DAL\DoctorGetaway.cs" />
     <Compile Include="DAL\PatientGetaway.cs" />
+    <Compile Include="DAL\QueueGetaway.cs" />
     <Compile Include="DAL\SheduleGetway.cs" />
     <Compile Include="DAL\SpecialityGetway.cs" />
     <Compile Include="Doctor.cs" />
+    <Compile Include="PatientQueue.cs" />
     <Compile Include="UI\AssignDoctor.cs">
       <SubType>Form</SubType>
     </Compile>

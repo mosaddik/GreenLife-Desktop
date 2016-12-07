@@ -57,8 +57,6 @@ namespace greenlife1.DAL
                     doc.Password = Convert.ToString(reader["password"]);
                     
 
-
-
                 }
                 
             }
