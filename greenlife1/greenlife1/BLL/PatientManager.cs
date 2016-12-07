@@ -21,6 +21,11 @@ namespace greenlife1.BLL
         {
             return    patientGetaway.GetById(patient);
         }
+
+        //public Patient GetAllPatient(Patient patient)
+        //{
+        //    return patientGetaway;
+        //}
         public List<Patient> GetAll()
         {
             return patientGetaway.GetAll();

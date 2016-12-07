@@ -51,7 +51,7 @@ namespace greenlife1.DAL
                     pat.Name = Convert.ToString(reader["name"]);
                     pat.Phone = Convert.ToString(reader["phone"]);
                     pat.Email = Convert.ToString(reader["email"]);
-                    pat.DOB = Convert.ToDateTime(reader["DOB"]);
+                    pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
                     pat.Gender = Convert.ToString(reader["gender"]);
                     pat.Address = Convert.ToString(reader["address"]);
                     pat.NID = Convert.ToString(reader["NID"]);
@@ -76,9 +76,21 @@ namespace greenlife1.DAL
             Patient pat = null;
             if (reader.HasRows)
             {
-                if (reader.Read())
+                while (reader.Read())
                 {
                     pat = new Patient();
+                    pat.ID = Convert.ToInt32(reader["id"]);
+                    pat.PatientId = Convert.ToString(reader["patient_id"]);
+                    pat.Name = Convert.ToString(reader["name"]);
+                    pat.Phone = Convert.ToString(reader["phone"]);
+                    pat.Email = Convert.ToString(reader["email"]);
+                    pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
+                    pat.Gender = Convert.ToString(reader["gender"]);
+                    pat.Address = Convert.ToString(reader["address"]);
+                    pat.NID = Convert.ToString(reader["NID"]);
+                    pat.Image.Name = Convert.ToString(reader["image"]);
+                    patientList.Add(pat);
+                
                 }
 
             }

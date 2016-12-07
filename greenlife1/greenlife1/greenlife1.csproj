@@ -83,6 +83,12 @@
     <Compile Include="UI\DoctorHome.Designer.cs">
       <DependentUpon>DoctorHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ExistingPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ExistingPatientForm.Designer.cs">
+      <DependentUpon>ExistingPatientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DoctorHome.resx">
       <DependentUpon>DoctorHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExistingPatientForm.resx">
+      <DependentUpon>ExistingPatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

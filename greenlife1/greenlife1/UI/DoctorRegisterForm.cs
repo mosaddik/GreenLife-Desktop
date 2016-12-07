@@ -187,6 +187,11 @@ namespace greenlife1
          
         }
 
+        private void doctorPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
       
 
     }

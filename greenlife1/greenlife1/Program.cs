@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using greenlife1.UI;
 using Greenlife1;
 
 namespace greenlife1
@@ -18,7 +19,7 @@ namespace greenlife1
             Application.EnableVisualStyles();
             
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new ExistingPatientForm());
         }
     }
 }
