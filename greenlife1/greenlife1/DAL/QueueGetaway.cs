@@ -53,7 +53,7 @@ namespace greenlife1.DAL
                     patientQueue.Doctor.DoctorId = reader["doctor_id"].ToString();
                     patientQueue.Patient.PatientId = reader["patient_id"].ToString();
                     patientQueue.QueueNo = reader["queue_no"].ToString();
-                    patientQueue.PatientEntryDateTime = Convert.ToDateTime(reader["queue_no"]);
+                    patientQueue.PatientEntryDateTime = Convert.ToDateTime(reader["date"]);
                     patientQueues.Add(patientQueue);
                 }
 

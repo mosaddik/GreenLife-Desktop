@@ -16,15 +16,33 @@ namespace greenlife1
     public partial class DoctorHome : Form
     {
         DoctorManager doctorManager =  new DoctorManager();
+        PatientManager patientManager =  new PatientManager();
+        PatientQueueManager patientQueueManager =  new PatientQueueManager();
         public List<Doctor> DoctorWithpatientQueue { set; get; }
         public string DoctorId { set; get; }
-        public DoctorHome( List<Doctor> doctorWithpatientQueue , string doctorId )
+        public DoctorHome(string doctor)
         {
+
             InitializeComponent();
-            this.DoctorWithpatientQueue = doctorWithpatientQueue;
-            this.DoctorId = doctorId;
-            
-            doctorManager.ViewPatientQueue(waitingPatientGrid, doctorWithpatientQueue, doctorId);
+            var docotorQueue = patientQueueManager.GetTodayQueueByDoctor(doctor);
+           // Doctor newDoctor  =  new Doctor(doctor);
+             DataTable table =  new DataTable();
+            table.Columns.Add("Serail No",typeof(string));
+            table.Columns.Add("Patient Name",typeof(string));
+            table.Columns.Add("Patient Problem",typeof(string));
+
+            foreach (var docQueue in docotorQueue)
+            {
+                //patientManager.Get(new )
+                
+            }
+     
+
+
+
+
+
+
         }
         private void DoctorHome_Load(object sender, EventArgs e)
         {
