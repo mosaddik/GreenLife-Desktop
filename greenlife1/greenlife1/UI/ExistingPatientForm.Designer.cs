@@ -31,6 +31,7 @@
             this.ExistingPatientLabel = new System.Windows.Forms.Label();
             this.searchPatientText = new System.Windows.Forms.TextBox();
             this.viewPatientGrid = new System.Windows.Forms.DataGridView();
+            this.searchPatientButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.viewPatientGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,10 +47,11 @@
             // 
             // searchPatientText
             // 
-            this.searchPatientText.Location = new System.Drawing.Point(564, 80);
+            this.searchPatientText.Location = new System.Drawing.Point(472, 77);
             this.searchPatientText.Name = "searchPatientText";
             this.searchPatientText.Size = new System.Drawing.Size(205, 20);
             this.searchPatientText.TabIndex = 1;
+            this.searchPatientText.TextChanged += new System.EventHandler(this.searchPatientText_TextChanged);
             // 
             // viewPatientGrid
             // 
@@ -58,12 +60,25 @@
             this.viewPatientGrid.Name = "viewPatientGrid";
             this.viewPatientGrid.Size = new System.Drawing.Size(706, 221);
             this.viewPatientGrid.TabIndex = 2;
+            this.viewPatientGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewPatientGrid_CellClick);
+            this.viewPatientGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewPatientGrid_CellContentClick);
+            // 
+            // searchPatientButton
+            // 
+            this.searchPatientButton.Location = new System.Drawing.Point(694, 77);
+            this.searchPatientButton.Name = "searchPatientButton";
+            this.searchPatientButton.Size = new System.Drawing.Size(75, 23);
+            this.searchPatientButton.TabIndex = 3;
+            this.searchPatientButton.Text = "Search";
+            this.searchPatientButton.UseVisualStyleBackColor = true;
+            this.searchPatientButton.Click += new System.EventHandler(this.searchPatientButton_Click);
             // 
             // ExistingPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 424);
+            this.Controls.Add(this.searchPatientButton);
             this.Controls.Add(this.viewPatientGrid);
             this.Controls.Add(this.searchPatientText);
             this.Controls.Add(this.ExistingPatientLabel);
@@ -81,5 +96,6 @@
         private System.Windows.Forms.Label ExistingPatientLabel;
         private System.Windows.Forms.TextBox searchPatientText;
         private System.Windows.Forms.DataGridView viewPatientGrid;
+        private System.Windows.Forms.Button searchPatientButton;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,8 +71,8 @@ namespace greenlife1.DAL
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
             var patientList = new List<Patient>();
-            string qurey = "select * from patient";
-            SqlCommand command = new SqlCommand(qurey, connection);
+            string query = "select * from patient";
+            SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader reader = command.ExecuteReader();
             Patient pat = null;
             if (reader.HasRows)
@@ -84,13 +85,68 @@ namespace greenlife1.DAL
                     pat.Name = Convert.ToString(reader["name"]);
                     pat.Phone = Convert.ToString(reader["phone"]);
                     pat.Email = Convert.ToString(reader["email"]);
-                    pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
+                   // pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
                     pat.Gender = Convert.ToString(reader["gender"]);
                     pat.Address = Convert.ToString(reader["address"]);
                     pat.NID = Convert.ToString(reader["NID"]);
                     pat.Image.Name = Convert.ToString(reader["image"]);
                     patientList.Add(pat);
                 
+                }
+
+            }
+
+            connection.Close();
+            return patientList;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public List<Patient> GetSearchedPatients(string searchTerm)
+        {
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            var patientList = new List<Patient>();
+            Patient pat = new Patient();
+            string qurey = "select * from patient where patient_id like '%" + searchTerm + "%' or name like '%" + searchTerm + "%' or phone like '%" + searchTerm + "%' "; //" @searchPatientText + '%' ";
+            SqlCommand command = new SqlCommand(qurey, connection);
+            SqlDataReader reader = command.ExecuteReader();
+            
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    pat = new Patient();
+                    pat.ID = Convert.ToInt32(reader["id"]);
+                    pat.PatientId = Convert.ToString(reader["patient_id"]);
+                    pat.Name = Convert.ToString(reader["name"]);
+                    pat.Phone = Convert.ToString(reader["phone"]);
+                    pat.Email = Convert.ToString(reader["email"]);
+
+                    pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
+                    pat.Gender = Convert.ToString(reader["gender"]);
+                    pat.Address = Convert.ToString(reader["address"]);
+                    pat.NID = Convert.ToString(reader["NID"]);
+                    pat.Image.Name = Convert.ToString(reader["image"]);
+                    patientList.Add(pat);
+
                 }
 
             }

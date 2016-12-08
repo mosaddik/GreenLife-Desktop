@@ -1,0 +1,17 @@
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\greenlife1.exe.config
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\greenlife1.exe
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\greenlife1.pdb
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\Spire.Barcode.dll
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\Spire.Barcode.xml
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.csprojResolveAssemblyReference.cache
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.UI.AssignDoctor.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.UI.DoctorLoginForm.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorRegisterForm.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorHome.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.UI.ExistingPatientForm.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.Home.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\Greenlife1.PatientRegisterForm.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.Properties.Resources.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.GenerateResource.Cache
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.exe
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.pdb

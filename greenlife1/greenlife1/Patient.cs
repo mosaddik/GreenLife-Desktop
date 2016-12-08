@@ -82,7 +82,7 @@ namespace greenlife1
 
         }
 
-        public void patientViewLoad(DataGridView viewPatientGrid)
+        public void patientGridLoad(DataGridView viewPatientGrid)
 
         {
             DataTable dt = new DataTable();
@@ -111,9 +111,37 @@ namespace greenlife1
             viewPatientGrid.DataSource = dt;
 
             }
-            
 
 
+
+        public void searchPatientGridLoad(DataGridView viewPatientGrid, string search)
+        {
+            DataTable dt = new DataTable();
+            PatientManager patientManager = new PatientManager();
+            //Patient pat = new Patient();
+
+
+
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Gender", typeof(string));
+            dt.Columns.Add("Phone", typeof(string));
+
+            dt.Columns.Add("Address", typeof(string));
+            dt.Columns.Add("Problems", typeof(string));
+            dt.Columns.Add("Natitonal ID", typeof(string));
+
+            foreach (var patient in patientManager.GetSearchedPatient(search))
+            {
+                //  if(pa)
+
+                viewPatientGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dt.Rows.Add(patient.Name, patient.Gender, patient.Phone, patient.Address, patient.Problem, patient.NID);
+                //);
+
+            }
+            viewPatientGrid.DataSource = dt;
+
+        }
 
     }
 }

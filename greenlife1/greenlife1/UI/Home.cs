@@ -53,5 +53,10 @@ namespace greenlife1
         {
             new AssignDoctor().Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new ExistingPatientForm().Show();
+        }
     }
 }

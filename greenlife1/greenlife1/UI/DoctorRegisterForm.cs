@@ -192,6 +192,16 @@ namespace greenlife1
 
         }
 
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doctorPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
       
 
     }
