@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using greenlife1.BLL;
 
 
 namespace greenlife1
@@ -47,6 +50,30 @@ namespace greenlife1
         public void PopPatient()
         {
             this.PatientQueue.Dequeue();
+        }
+
+        public int GetDoctorAge()
+        {
+            int age =   (DateTime.Now.Year - DateOfBirth.Year);
+            return age;
+        }
+
+
+        public void LoadGridVIew(string doctor, DataGridView waitingPatientGrid,PatientQueueManager patientQueueManager,PatientManager patientManager )
+        {
+          
+            DataTable table = new DataTable();
+            table.Columns.Add("Serail No", typeof(string));
+            table.Columns.Add("Patient Name", typeof(string));
+            table.Columns.Add("Patient Problem", typeof(string));
+            var docotorQueue = patientQueueManager.GetTodayQueueByDoctor(doctor);
+            foreach (var docQueue in docotorQueue)
+            {
+                var patient = patientManager.Get(docQueue.Patient);
+                table.Rows.Add(docQueue.QueueNo, patient.Name, patient.Problem);
+            }
+            waitingPatientGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
+            waitingPatientGrid.DataSource = table;
         }
     }
     

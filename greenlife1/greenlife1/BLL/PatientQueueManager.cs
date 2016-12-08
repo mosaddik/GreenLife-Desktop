@@ -7,7 +7,7 @@ using greenlife1.DAL;
 
 namespace greenlife1.BLL
 {
-    class PatientQueueManager
+    public class PatientQueueManager
     {
         private QueueGetaway queueGetaway = new QueueGetaway();
 
@@ -50,6 +50,15 @@ namespace greenlife1.BLL
             return queueNo;
 
 
+        }
+        PatientGetaway patientGetaway  =  new PatientGetaway();
+
+        public Patient DequePatient(string docotorId)
+        {
+            var queue =    this.GetTodayQueueByDoctor(docotorId).First();
+            var patient = patientGetaway.GetById(queue.Patient);
+            queueGetaway.Deque(queue);
+            return patient;
         }
 
     }

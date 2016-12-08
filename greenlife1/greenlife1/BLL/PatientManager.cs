@@ -8,7 +8,7 @@ using greenlife1.DAL;
 
 namespace greenlife1.BLL
 {
-    class PatientManager
+    public class PatientManager
     {
 
         private PatientGetaway patientGetaway =  new PatientGetaway();

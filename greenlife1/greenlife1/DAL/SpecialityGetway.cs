@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace greenlife1.DAL
 {
-    class SpecialityGetway
+   public  class SpecialityGetway
     {
 
 

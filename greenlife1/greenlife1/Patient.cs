@@ -82,15 +82,12 @@ namespace greenlife1
 
         }
 
-        public void patientGridLoad(DataGridView viewPatientGrid)
 
+        public void patientGridLoad(DataGridView viewPatientGrid)
         {
             DataTable dt = new DataTable();
             PatientManager patientManager = new PatientManager();
             //Patient pat = new Patient();
-
-        
-            
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Gender", typeof(string));
             dt.Columns.Add("Phone", typeof(string));
@@ -119,9 +116,6 @@ namespace greenlife1
             DataTable dt = new DataTable();
             PatientManager patientManager = new PatientManager();
             //Patient pat = new Patient();
-
-
-
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Gender", typeof(string));
             dt.Columns.Add("Phone", typeof(string));
@@ -133,14 +127,17 @@ namespace greenlife1
             foreach (var patient in patientManager.GetSearchedPatient(search))
             {
                 //  if(pa)
-
                 viewPatientGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dt.Rows.Add(patient.Name, patient.Gender, patient.Phone, patient.Address, patient.Problem, patient.NID);
                 //);
-
             }
             viewPatientGrid.DataSource = dt;
 
+        }
+		
+		 public int GetAge()
+        {
+            return DOB.Year - DateTime.Today.Day;
         }
 
     }

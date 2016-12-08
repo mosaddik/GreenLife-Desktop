@@ -7,7 +7,7 @@ using greenlife1.DAL;
 
 namespace greenlife1.BLL
 {
-    class SpecialityManager
+    public class SpecialityManager
     {
         SpecialityGetway specialityGetway  = new SpecialityGetway();
         public List<Speciality> GetAll()

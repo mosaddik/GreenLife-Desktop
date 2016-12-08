@@ -9,7 +9,7 @@ using greenlife1.DAL;
 
 namespace greenlife1.BLL
 {
-    class DoctorManager
+    public class DoctorManager
 
     {
         private DoctorGetaway doctorGetaway =   new DoctorGetaway();

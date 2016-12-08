@@ -45,6 +45,7 @@ namespace greenlife1.UI
                 queue.Patient = Patient;
                 queue.Doctor.DoctorId = doctorid;
                 queue.PatientEntryDateTime = DateTime.Now;
+                queue.State = "INQUEUE";
                 queue.QueueNo = patientQueueManager.GenarateQueueNo(doctorid);
                 patientQueueManager.AddToQueue(queue);
                 DialogResult dialogResult = MessageBox.Show("Patient Queue No is "+ queue.QueueNo);

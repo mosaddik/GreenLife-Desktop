@@ -107,7 +107,11 @@
             this.doctorPanel.Name = "doctorPanel";
             this.doctorPanel.Size = new System.Drawing.Size(987, 471);
             this.doctorPanel.TabIndex = 0;
+
             this.doctorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.doctorPanel_Paint_1);
+
+            this.doctorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.doctorPanel_Paint);
+
             // 
             // listView1
             // 
@@ -315,7 +319,9 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(328, 20);
             this.nameTextBox.TabIndex = 11;
+
             this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
+
             // 
             // imageTextBox
             // 

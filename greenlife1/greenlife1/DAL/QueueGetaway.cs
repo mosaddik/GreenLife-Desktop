@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace greenlife1.DAL
 {
-    class QueueGetaway
+    public class QueueGetaway
     {
         private string connectionString =
             "Data Source=192.168.0.103,49170;Initial Catalog=greenlife;User=sa; Password=123;";
@@ -21,9 +21,9 @@ namespace greenlife1.DAL
 
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "INSERT INTO [Patient_Queue]  (doctor_id,patient_id,queue_no,date) values ('" +
+            string query = "INSERT INTO [Patient_Queue]  (doctor_id,patient_id,queue_no,date,state) values ('" +
                            queue.Doctor.DoctorId + "','" + queue.Patient.PatientId + "','" + queue.QueueNo + "','" +
-                           queue.PatientEntryDateTime.Date.ToString("dd-MM-yyyy") + "') ";
+                           queue.PatientEntryDateTime.Date.ToString("dd-MM-yyyy") + "','"+queue.State+"') ";
             ;
             SqlCommand command = new SqlCommand(query, connection);
             int rowsEffected = command.ExecuteNonQuery();
@@ -54,6 +54,7 @@ namespace greenlife1.DAL
                     patientQueue.Patient.PatientId = reader["patient_id"].ToString();
                     patientQueue.QueueNo = reader["queue_no"].ToString();
                     patientQueue.PatientEntryDateTime = Convert.ToDateTime(reader["date"]);
+                    
                     patientQueues.Add(patientQueue);
                 }
 
@@ -97,7 +98,7 @@ namespace greenlife1.DAL
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
             string query = "select * from [Patient_Queue] where date BETWEEN '" + DateTime.Today.ToString("dd-MM-yyyy") +
-                           "' AND  '" + DateTime.Today.AddDays(1).AddSeconds(-1).ToString("dd-MM-yyyy") + "' ";
+                           "' AND  '" + DateTime.Today.AddDays(1).AddSeconds(-1).ToString("dd-MM-yyyy") + "'  AND state= 'INQUEUE' ";
             SqlCommand command = new SqlCommand(query, connection);
             List<PatientQueue> patientQueues = new List<PatientQueue>();
             SqlDataReader reader = command.ExecuteReader();
@@ -111,7 +112,9 @@ namespace greenlife1.DAL
                     patientQueue.Patient.PatientId = reader["patient_id"].ToString();
                     patientQueue.QueueNo = reader["queue_no"].ToString();
                     patientQueue.PatientEntryDateTime = Convert.ToDateTime(reader["date"]);
+                    patientQueue.State = reader["state"].ToString();
                     patientQueues.Add(patientQueue);
+                    
                 }
 
             }
@@ -128,7 +131,7 @@ namespace greenlife1.DAL
                 connection.Open();
                 string query = "select MAX(queue_no) from [Patient_Queue] where date BETWEEN '" +
                                DateTime.Today.ToString("dd-MM-yyyy") + "' AND  '" +
-                               DateTime.Today.AddDays(1).AddSeconds(-1).ToString("dd-MM-yyyy") + "' AND doctor_id='"+doctorId+"'";
+                               DateTime.Today.AddDays(1).AddSeconds(-1).ToString("dd-MM-yyyy") + "' AND doctor_id='" + doctorId + "' AND state='INQUEUE'";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 PatientQueue patientQueue = null;
@@ -148,6 +151,28 @@ namespace greenlife1.DAL
                 return null;
             }
         }
+
+        public bool Deque(PatientQueue patientQueue)
+        {
+            bool isSave = false;
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "UPDATE [Patient_Queue] SET state='DEQUE' where patient_id='" + patientQueue.Patient.PatientId + "'   ";
+            ;
+            SqlCommand command = new SqlCommand(query, connection);
+            int rowsEffected = command.ExecuteNonQuery();
+
+            if (rowsEffected > 0)
+            {
+                isSave = true;
+            }
+            connection.Close();
+            return isSave;
+        }
+
+
+       
 
 
 

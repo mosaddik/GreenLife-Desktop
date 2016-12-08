@@ -9,7 +9,7 @@ using Greenlife1;
 
 namespace greenlife1.DAL
 {
-    class PatientGetaway
+    public class PatientGetaway
     {
         private string connectionString = "Data Source=192.168.0.103,49170;Initial Catalog=greenlife;User=sa; Password=123;";
 
@@ -20,9 +20,9 @@ namespace greenlife1.DAL
 
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "INSERT INTO patient (patient_Id,name,gender,address,phone,nid,image,date_Of_Birth)" +
+            string query = "INSERT INTO patient (patient_Id,name,gender,address,phone,nid,image,date_Of_Birth,problems)" +
                            "values('" + patient.PatientId + "','" + patient.Name + "','" + patient.Gender + "','" + patient.Address + "','" + patient.Phone + "','" + patient.NID + "','" + patient.Image + "','" + patient.DOB
-                           + "')";
+                           + "','"+patient.Problem+"')";
 
             SqlCommand command = new SqlCommand(query, connection);
             int rowsEffected = command.ExecuteNonQuery();
@@ -54,6 +54,7 @@ namespace greenlife1.DAL
                     pat.Email = Convert.ToString(reader["email"]);
                     pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
                     pat.Gender = Convert.ToString(reader["gender"]);
+                    pat.Problem = Convert.ToString(reader["problems"]);
                     pat.Address = Convert.ToString(reader["address"]);
                     pat.NID = Convert.ToString(reader["NID"]);
                     pat.Image.Name = Convert.ToString(reader["image"]);
@@ -85,7 +86,7 @@ namespace greenlife1.DAL
                     pat.Name = Convert.ToString(reader["name"]);
                     pat.Phone = Convert.ToString(reader["phone"]);
                     pat.Email = Convert.ToString(reader["email"]);
-                   // pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
+                    pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
                     pat.Gender = Convert.ToString(reader["gender"]);
                     pat.Address = Convert.ToString(reader["address"]);
                     pat.NID = Convert.ToString(reader["NID"]);
@@ -139,14 +140,12 @@ namespace greenlife1.DAL
                     pat.Name = Convert.ToString(reader["name"]);
                     pat.Phone = Convert.ToString(reader["phone"]);
                     pat.Email = Convert.ToString(reader["email"]);
-
                     pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
                     pat.Gender = Convert.ToString(reader["gender"]);
                     pat.Address = Convert.ToString(reader["address"]);
                     pat.NID = Convert.ToString(reader["NID"]);
                     pat.Image.Name = Convert.ToString(reader["image"]);
                     patientList.Add(pat);
-
                 }
 
             }
