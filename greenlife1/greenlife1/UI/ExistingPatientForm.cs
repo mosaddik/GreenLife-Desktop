@@ -55,10 +55,7 @@ namespace greenlife1.UI
            
         }
 
-       
-           
-        
-        
+      
 
         private void searchPatientText_TextChanged(object sender, EventArgs e)
         {

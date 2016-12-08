@@ -86,7 +86,13 @@ namespace greenlife1.DAL
                     pat.Name = Convert.ToString(reader["name"]);
                     pat.Phone = Convert.ToString(reader["phone"]);
                     pat.Email = Convert.ToString(reader["email"]);
-                    pat.DOB = Convert.ToDateTime(reader["date_of_birth"]);
+                    if (reader["date_of_birth"] != null)
+                    {
+                       var  a =  reader["date_of_birth"];
+                        pat.DOB = Convert.ToDateTime(a);
+
+                    }
+                    
                     pat.Gender = Convert.ToString(reader["gender"]);
                     pat.Address = Convert.ToString(reader["address"]);
                     pat.NID = Convert.ToString(reader["NID"]);

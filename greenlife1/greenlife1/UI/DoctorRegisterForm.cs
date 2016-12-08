@@ -192,7 +192,7 @@ namespace greenlife1
 
         }
 
-<<<<<<< HEAD
+
         private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -203,9 +203,6 @@ namespace greenlife1
 
         }
 
-=======
->>>>>>> ebff8373969bfbe49e81873622aee8d3354e23bf
-      
 
     }
 }
