@@ -92,6 +92,7 @@ namespace greenlife1
                 doctor.Address = AddressTextBox.Text;
                 doctor.NID = NIDTextBox.Text;
                 doctor.Email = emailTextBox.Text;
+                doctor.Password = passwordTextBox.Text;
                 doctor.Phone = phoneBox.Text;
                 doctor.Schedules = schedules;
                 doctor.Image.Name = doctorImage;
@@ -131,6 +132,7 @@ namespace greenlife1
                     nameTextBox.Text = "";
                     AddressTextBox.Text = "";
                     emailTextBox.Text = "";
+                    passwordTextBox.Text = "";
                     maleRadio.Checked = false;
                     femaleRadio.Checked = false;
                     // SpecilityTextBox.Text = "";
@@ -202,7 +204,5 @@ namespace greenlife1
         {
 
         }
-
-
     }
 }

@@ -43,7 +43,7 @@ namespace greenlife1.BLL
             if (queueGetaway.GetMaxQueueNoOfToDayOfADocotor(docotorId).QueueNo != "")
             {
                 patientQueue = queueGetaway.GetMaxQueueNoOfToDayOfADocotor(docotorId);
-                queueNo = (Convert.ToInt32(patientQueue.QueueNo)+1).ToString();
+                queueNo = (Convert.ToInt32(patientQueue.QueueNo) + 1).ToString();
             }
 
 
@@ -51,14 +51,41 @@ namespace greenlife1.BLL
 
 
         }
-        PatientGetaway patientGetaway  =  new PatientGetaway();
+
+        PatientGetaway patientGetaway = new PatientGetaway();
 
         public Patient DequePatient(string docotorId)
         {
-            var queue =    this.GetTodayQueueByDoctor(docotorId).First();
-            var patient = patientGetaway.GetById(queue.Patient);
-            queueGetaway.Deque(queue);
-            return patient;
+            try
+            {
+                var queue = this.GetTodayQueueByDoctor(docotorId).First();
+                var patient = patientGetaway.GetById(queue.Patient);
+                queueGetaway.Deque(queue);
+                return patient;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            return null;
+
+        }
+
+        public PatientQueue GetTopOfTheQueue(string docotorId)
+        {
+            PatientQueue queue = null;
+            try
+            {
+                queue = this.GetTodayQueueByDoctor(docotorId).First();
+            }
+            catch (Exception)
+            {
+
+                return  null;
+            }
+            return queue;
+
         }
 
     }

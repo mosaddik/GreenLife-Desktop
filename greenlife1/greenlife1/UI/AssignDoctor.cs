@@ -16,6 +16,7 @@ namespace greenlife1.UI
     {
        
         public  Patient Patient { get; set; }
+        
         public AssignDoctor()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace greenlife1.UI
 
         private void AssignDoctor_Load(object sender, EventArgs e)
         {
-            patientNameLabel.Text = this.Patient.Name;
+            //patientNameLabel.Text = this.Patient.Name;
             patientPhoneLabel.Text = this.Patient.Phone;
             patientProblemLabel.Text = this.Patient.Problem;
             Patient.GridviewLoad(dataGridView1);
@@ -38,11 +39,22 @@ namespace greenlife1.UI
         PatientQueueManager patientQueueManager =  new PatientQueueManager();
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            PatientQueue queue = new PatientQueue();
+
+            queue.Patient = Patient;
+
+           
+
+
+
+            //click button to insert queue
             if (e.ColumnIndex == 4)
             {
+              
+
+
+                //insert into queue
                 string doctorid = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                PatientQueue queue = new PatientQueue();
-                queue.Patient = Patient;
                 queue.Doctor.DoctorId = doctorid;
                 queue.PatientEntryDateTime = DateTime.Now;
                 queue.State = "INQUEUE";

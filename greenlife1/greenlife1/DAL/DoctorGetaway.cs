@@ -19,9 +19,9 @@ namespace greenlife1.DAL
 
             SqlConnection connection =  new SqlConnection(connectionString);
             connection.Open();
-            string query = "INSERT INTO dbo.doctor ([doctor_id],name,gender,address,phone,nid,qualification,image,[date_of_birth],email)" +
+            string query = "INSERT INTO dbo.doctor ([doctor_id],name,gender,address,phone,nid,qualification,image,[date_of_birth],email,password)" +
                            "values('"+doctor.DoctorId+"','"+doctor.Name+"','"+doctor.Gender+"','"+doctor.Address+"','"+doctor.Phone+"','"+doctor.NID+"','"+doctor.Qualification+"','"+doctor.Image.Name
-                           +"','"+doctor.DateOfBirth+"','"+doctor.Email+"')";
+                           +"','"+doctor.DateOfBirth+"','"+doctor.Email+"' , '"+doctor.Password +"')";
    
             ;
             SqlCommand command = new SqlCommand(query,connection);

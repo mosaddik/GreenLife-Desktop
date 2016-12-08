@@ -28,6 +28,14 @@ namespace greenlife1
             GridviewLoad(doctor);
             this.Doctor = new Doctor(doctor);
             Doctor.LoadGridVIew(Doctor.DoctorId, waitingPatientGrid, patientQueueManager, patientManager);
+            waitingPatientGrid.Hide();
+
+            if (patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId) != null)
+            {
+                QueueInfoLabel.Text = patientQueueManager.GetTodayQueueByDoctor(Doctor.DoctorId).Count.ToString();
+                QueueInfoLabel.Text = QueueInfoLabel.Text + "/" + patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId).QueueNo; 
+            }
+        
 
 
 
@@ -60,10 +68,24 @@ namespace greenlife1
 
         private void callPatient_Click(object sender, EventArgs e)
         {
-            
-            var patient = patientQueueManager.DequePatient(Doctor.DoctorId);
-            PatientNameLabel.Text = patient.Name;
+
+            if (patientQueueManager.DequePatient(Doctor.DoctorId) != null)
+            {
+                var patient = patientQueueManager.DequePatient(Doctor.DoctorId);
+                PatientNameLabel.Text = patient.Name;
+            }
+            else
+            {
+                MessageBox.Show("No Patient in QUEUE");
+            }
+         
             Doctor.LoadGridVIew(Doctor.DoctorId,waitingPatientGrid,patientQueueManager,patientManager);
+
+            if (patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId) != null)
+            {
+                QueueInfoLabel.Text = patientQueueManager.GetTodayQueueByDoctor(Doctor.DoctorId).Count.ToString();
+                QueueInfoLabel.Text = QueueInfoLabel.Text + "/" + patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId).QueueNo;
+            }
 
         }
 
@@ -74,8 +96,18 @@ namespace greenlife1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Doctor  doc = doctorManager.GetById(Doctor);
-            doc.GetDoctorAge();
+            if (showPatientDetailButton.Text == "Show Patient Detail")
+            {
+                 waitingPatientGrid.Show();
+                showPatientDetailButton.Text = "Hide Patient Detail";
+            }
+            else if (showPatientDetailButton.Text == "Hide Patient Detail")
+            {
+                showPatientDetailButton.Text = "Show Patient Detail";
+                waitingPatientGrid.Hide();
+            }
+           
+
         }
 
        
