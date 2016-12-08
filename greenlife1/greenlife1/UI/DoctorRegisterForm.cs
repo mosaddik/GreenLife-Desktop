@@ -92,6 +92,7 @@ namespace greenlife1
                 doctor.Address = AddressTextBox.Text;
                 doctor.NID = NIDTextBox.Text;
                 doctor.Email = emailTextBox.Text;
+                doctor.Password = passwordTextBox.Text;
                 doctor.Phone = phoneBox.Text;
                 doctor.Schedules = schedules;
                 doctor.Image.Name = doctorImage;
@@ -131,6 +132,7 @@ namespace greenlife1
                     nameTextBox.Text = "";
                     AddressTextBox.Text = "";
                     emailTextBox.Text = "";
+                    passwordTextBox.Text = "";
                     maleRadio.Checked = false;
                     femaleRadio.Checked = false;
                     // SpecilityTextBox.Text = "";
@@ -192,7 +194,7 @@ namespace greenlife1
 
         }
 
-<<<<<<< HEAD
+
         private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -203,8 +205,7 @@ namespace greenlife1
 
         }
 
-=======
->>>>>>> ebff8373969bfbe49e81873622aee8d3354e23bf
+
       
 
     }

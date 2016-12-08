@@ -11,12 +11,14 @@ using greenlife1.BLL;
 
 namespace greenlife1.UI
 {
-    public partial class ExistingPatientForm : Form
+    public partial class 
+         
+        ExistingPatientForm : Form
 
     {
         PatientManager patientManager = new PatientManager();
 
-        Patient patient = new Patient();
+        public Patient Patient { get; set; }
 
         public ExistingPatientForm()
         {
@@ -27,27 +29,29 @@ namespace greenlife1.UI
 
         private void ExistingPatientForm_Load(object sender, EventArgs e)
         {
-            patient.patientGridLoad(viewPatientGrid);
+            this.Patient = new Patient();
+            Patient.patientGridLoad(viewPatientGrid);
 
             DataGridViewButtonColumn TakeButton = new DataGridViewButtonColumn();
             TakeButton.Text = "Take";
             TakeButton.UseColumnTextForButtonValue = true;
             viewPatientGrid.Columns.Add(TakeButton);
+
         }
 
         private void searchPatientButton_Click(object sender, EventArgs e)
         {
             try
             {
-     patient.Name = searchPatientText.Text;
-           
-            patient.searchPatientGridLoad(viewPatientGrid, patient.Name );
+                Patient.Name = searchPatientText.Text;
+
+                Patient.searchPatientGridLoad(viewPatientGrid, Patient.Name);
 
          
             }
             catch (Exception exception )
             {
-                patient.patientGridLoad(viewPatientGrid);
+                Patient.patientGridLoad(viewPatientGrid);
 
                
             }
@@ -69,14 +73,29 @@ namespace greenlife1.UI
         {
         
         }
-
+        PatientQueueManager patientQueueManager =  new PatientQueueManager();
         private void viewPatientGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //MessageBox.Show(e.ColumnIndex.ToString());
-            if (e.ColumnIndex == 6)
+            //goto  assing doctor 
+            if (e.ColumnIndex == 7)
             {
-                //MessageBox.Show("");
-                AssignDoctor assignDoctor = new AssignDoctor(patient);
+              
+
+                string patientId = viewPatientGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                //if this patient already assiged to a doctor 
+                foreach (var queue in  patientQueueManager.GetToDayQueue())
+                {
+                    if (queue.Patient.PatientId == patientId)
+                    {
+                        MessageBox.Show("Already  assined to  a doctor");
+                        return;
+                    }
+
+                }
+               
+
+                Patient = patientManager.Get(new Patient() {PatientId = patientId}); 
+               AssignDoctor assignDoctor = new AssignDoctor(Patient);
                 this.Close();
                 assignDoctor.Show();
             }

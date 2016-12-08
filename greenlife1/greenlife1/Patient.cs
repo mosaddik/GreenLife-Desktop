@@ -88,6 +88,7 @@ namespace greenlife1
             DataTable dt = new DataTable();
             PatientManager patientManager = new PatientManager();
             //Patient pat = new Patient();
+            dt.Columns.Add("Patient ID", typeof(int));
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Gender", typeof(string));
             dt.Columns.Add("Phone", typeof(string));
@@ -101,7 +102,7 @@ namespace greenlife1
                   //  if(pa)
                     
                     viewPatientGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dt.Rows.Add(patient.Name,patient.Gender,patient.Phone,patient.Address,patient.Problem,patient.NID);
+                    dt.Rows.Add(patient.PatientId, patient.Name, patient.Gender, patient.Phone, patient.Address, patient.Problem, patient.NID);
                 //);
 
             }
@@ -116,6 +117,7 @@ namespace greenlife1
             DataTable dt = new DataTable();
             PatientManager patientManager = new PatientManager();
             //Patient pat = new Patient();
+            dt.Columns.Add("Patient ID", typeof(int));
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Gender", typeof(string));
             dt.Columns.Add("Phone", typeof(string));
@@ -128,7 +130,7 @@ namespace greenlife1
             {
                 //  if(pa)
                 viewPatientGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dt.Rows.Add(patient.Name, patient.Gender, patient.Phone, patient.Address, patient.Problem, patient.NID);
+                dt.Rows.Add(patient.PatientId, patient.Name, patient.Gender, patient.Phone, patient.Address, patient.Problem, patient.NID);
                 //);
             }
             viewPatientGrid.DataSource = dt;

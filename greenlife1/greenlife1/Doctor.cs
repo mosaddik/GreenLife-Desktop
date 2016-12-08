@@ -26,6 +26,8 @@ namespace greenlife1
         public DateTime DateOfBirth { set; get; }
         public string Address { set; get; }
 
+        
+
         public List<Schedule> Schedules { set; get; }
         public List<Speciality> Speciality {set; get ;}
         public Queue<Patient> PatientQueue { get; set; }

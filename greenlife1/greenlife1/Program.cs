@@ -19,7 +19,7 @@ namespace greenlife1
             Application.EnableVisualStyles();
             
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PatientRegisterForm());
+            Application.Run(new Home());
         }
     }
 }

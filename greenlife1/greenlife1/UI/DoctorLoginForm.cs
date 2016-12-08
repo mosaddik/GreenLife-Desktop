@@ -32,8 +32,8 @@ namespace greenlife1.UI
 
             if (doctorManager.Login(doctor))
             {
-                 var loginedDoctor = doctorManager.GetById(doctor);
-                 DoctorHome doctorHome =  new DoctorHome(loginedDoctor.DoctorId);
+                 var loggedInDoctor = doctorManager.GetById(doctor);
+                 DoctorHome doctorHome =  new DoctorHome(loggedInDoctor.DoctorId);
                  this.Close();
                  doctorHome.Show();
             }

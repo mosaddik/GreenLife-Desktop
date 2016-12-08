@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\greenlife1.exe.config
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\greenlife1.exe
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\greenlife1.pdb
@@ -6,6 +5,7 @@ C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\Spire.B
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\bin\Debug\Spire.Barcode.xml
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.csprojResolveAssemblyReference.cache
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.UI.AssignDoctor.resources
+C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.UI.DoctorList.resources
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.UI.DoctorLoginForm.resources
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorRegisterForm.resources
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorHome.resources
@@ -16,61 +16,3 @@ C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenli
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.GenerateResource.Cache
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.exe
 C:\Users\PC2\Desktop\greenlife1 Progress\greenlife1\greenlife1\obj\Debug\greenlife1.pdb
-=======
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\bin\Debug\greenlife1.exe.config
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.csprojResolveAssemblyReference.cache
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.Form1.resources
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.Properties.Resources.resources
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.GenerateResource.Cache
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\bin\Debug\greenlife1.exe
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\bin\Debug\greenlife1.pdb
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.exe
-c:\users\future move it2\documents\visual studio 2013\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.pdb
-E:\Projects\greenlife1\greenlife1\bin\Debug\greenlife1.exe.config
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.exe
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.pdb
-E:\Projects\greenlife1\greenlife1\bin\Debug\greenlife1.exe
-E:\Projects\greenlife1\greenlife1\bin\Debug\greenlife1.pdb
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.csprojResolveAssemblyReference.cache
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.Properties.Resources.resources
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.GenerateResource.Cache
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.PatientRegisterForm.resources
-E:\Projects\greenlife1\greenlife1\bin\Debug\Spire.Barcode.dll
-E:\Projects\greenlife1\greenlife1\bin\Debug\Spire.Barcode.xml
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorRegisterForm.resources
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.AssignDoctorForm.resources
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorHome.resources
-E:\Projects\greenlife1\greenlife1\obj\Debug\greenlife1.Home.resources
-E:\Software and Vedio\greenlife1\greenlife1\bin\Debug\greenlife1.exe.config
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.exe
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.pdb
-E:\Software and Vedio\greenlife1\greenlife1\bin\Debug\greenlife1.exe
-E:\Software and Vedio\greenlife1\greenlife1\bin\Debug\greenlife1.pdb
-E:\Software and Vedio\greenlife1\greenlife1\bin\Debug\Spire.Barcode.dll
-E:\Software and Vedio\greenlife1\greenlife1\bin\Debug\Spire.Barcode.xml
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.csprojResolveAssemblyReference.cache
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.AssignDoctorForm.resources
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorRegisterForm.resources
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorHome.resources
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.Home.resources
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\Greenlife1.PatientRegisterForm.resources
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.Properties.Resources.resources
-E:\Software and Vedio\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.GenerateResource.Cache
-E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\greenlife1.exe.config
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.exe
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.pdb
-E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\greenlife1.exe
-E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\greenlife1.pdb
-E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\Spire.Barcode.dll
-E:\Projects\greenlife\greenlife1\greenlife1\bin\Debug\Spire.Barcode.xml
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.csprojResolveAssemblyReference.cache
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorRegisterForm.resources
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.DoctorHome.resources
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.Home.resources
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\Greenlife1.PatientRegisterForm.resources
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.Properties.Resources.resources
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.csproj.GenerateResource.Cache
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.UI.DoctorLoginForm.resources
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.UI.AssignDoctor.resources
-E:\Projects\greenlife\greenlife1\greenlife1\obj\Debug\greenlife1.UI.DoctorList.resources
->>>>>>> ebff8373969bfbe49e81873622aee8d3354e23bf
