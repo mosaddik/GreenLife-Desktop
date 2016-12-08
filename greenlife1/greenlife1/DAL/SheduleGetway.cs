@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace greenlife1.DAL
 {
-    class ScheduleGetway
+   public  class ScheduleGetway
     {
         private string connectionString = "Data Source=192.168.0.103,49170;Initial Catalog=greenlife;User=sa; Password=123;";
 

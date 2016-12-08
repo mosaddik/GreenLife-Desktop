@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace greenlife1.DAL
 {
-    class DoctorGetaway
+    public class DoctorGetaway
     {
         private string connectionString = "Data Source=192.168.0.103,49170;Initial Catalog=greenlife;User=sa; Password=123;";
 
@@ -52,6 +52,7 @@ namespace greenlife1.DAL
                     doc.Address = Convert.ToString(reader["address"]);
                     doc.Phone = Convert.ToString(reader["phone"]);
                     doc.NID = Convert.ToString(reader["nid"]);
+                    doc.DateOfBirth = Convert.ToDateTime(reader["date_of_birth"]);
                     doc.Email = Convert.ToString(reader["email"]);
                     doc.Image.Name = Convert.ToString(reader["image"]);
                     doc.Password = Convert.ToString(reader["password"]);
@@ -86,6 +87,7 @@ namespace greenlife1.DAL
                     doc.Address = Convert.ToString(reader["address"]);
                     doc.Phone = Convert.ToString(reader["phone"]);
                     doc.NID = Convert.ToString(reader["nid"]);
+                    doc.DateOfBirth = Convert.ToDateTime(reader["date_of_birth"]);
                     doc.Email = Convert.ToString(reader["email"]);
                     doc.Qualification = Convert.ToString(reader["qualification"]);
                     doc.Image.Name = Convert.ToString(reader["image"]);

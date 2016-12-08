@@ -82,6 +82,11 @@ namespace greenlife1
 
         }
 
+        public int GetAge()
+        {
+            return DOB.Year - DateTime.Today.Day;
+        }
+
 
 
     }

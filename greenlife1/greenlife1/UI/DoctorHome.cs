@@ -15,6 +15,7 @@ namespace greenlife1
     
     public partial class DoctorHome : Form
     {
+        public Doctor Doctor { set; get; }
         DoctorManager doctorManager =  new DoctorManager();
         PatientManager patientManager =  new PatientManager();
         PatientQueueManager patientQueueManager =  new PatientQueueManager();
@@ -22,22 +23,11 @@ namespace greenlife1
         public string DoctorId { set; get; }
         public DoctorHome(string doctor)
         {
-
+            
             InitializeComponent();
-            var docotorQueue = patientQueueManager.GetTodayQueueByDoctor(doctor);
-           // Doctor newDoctor  =  new Doctor(doctor);
-             DataTable table =  new DataTable();
-            table.Columns.Add("Serail No",typeof(string));
-            table.Columns.Add("Patient Name",typeof(string));
-            table.Columns.Add("Patient Problem",typeof(string));
-
-            foreach (var docQueue in docotorQueue)
-            {
-                //patientManager.Get(new )
-                
-            }
-     
-
+            GridviewLoad(doctor);
+            this.Doctor = new Doctor(doctor);
+            Doctor.LoadGridVIew(Doctor.DoctorId, waitingPatientGrid, patientQueueManager, patientManager);
 
 
 
@@ -55,5 +45,39 @@ namespace greenlife1
             var patient  = new PatientRegisterForm();
             patient.DoctorGUI = this;
         }
+
+        private void GridviewLoad(string doctor)
+        {
+         
+
+
+         }
+
+        private void waitingPatientGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void callPatient_Click(object sender, EventArgs e)
+        {
+            
+            var patient = patientQueueManager.DequePatient(Doctor.DoctorId);
+            PatientNameLabel.Text = patient.Name;
+            Doctor.LoadGridVIew(Doctor.DoctorId,waitingPatientGrid,patientQueueManager,patientManager);
+
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            Doctor.LoadGridVIew(Doctor.DoctorId, waitingPatientGrid, patientQueueManager, patientManager);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Doctor  doc = doctorManager.GetById(Doctor);
+            doc.GetDoctorAge();
+        }
+
+       
     }
 }

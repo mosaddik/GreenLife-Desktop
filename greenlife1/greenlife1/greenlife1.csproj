@@ -65,6 +65,12 @@
     <Compile Include="UI\AssignDoctor.Designer.cs">
       <DependentUpon>AssignDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\DoctorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DoctorList.Designer.cs">
+      <DependentUpon>DoctorList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DoctorLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="Speciality.cs" />
     <EmbeddedResource Include="UI\AssignDoctor.resx">
       <DependentUpon>AssignDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DoctorList.resx">
+      <DependentUpon>DoctorList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DoctorLoginForm.resx">
       <DependentUpon>DoctorLoginForm.cs</DependentUpon>
