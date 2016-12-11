@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.doctorPanel = new System.Windows.Forms.Panel();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.endTime = new System.Windows.Forms.DateTimePicker();
             this.startTime = new System.Windows.Forms.DateTimePicker();
@@ -62,8 +64,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.doctorPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -109,35 +109,52 @@
             this.doctorPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.doctorPanel.Location = new System.Drawing.Point(54, 23);
             this.doctorPanel.Name = "doctorPanel";
-            this.doctorPanel.Size = new System.Drawing.Size(987, 491);
+            this.doctorPanel.Size = new System.Drawing.Size(1228, 502);
             this.doctorPanel.TabIndex = 0;
             this.doctorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.doctorPanel_Paint);
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Location = new System.Drawing.Point(112, 221);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
+            this.passwordTextBox.Size = new System.Drawing.Size(328, 20);
+            this.passwordTextBox.TabIndex = 38;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(38, 228);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
+            this.passwordLabel.TabIndex = 37;
+            this.passwordLabel.Text = "Password";
             // 
             // listView1
             // 
             this.listView1.Location = new System.Drawing.Point(613, 191);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(348, 205);
+            this.listView1.Size = new System.Drawing.Size(594, 309);
             this.listView1.TabIndex = 36;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // endTime
             // 
-            this.endTime.Location = new System.Drawing.Point(857, 83);
+            this.endTime.Location = new System.Drawing.Point(1086, 80);
             this.endTime.Name = "endTime";
             this.endTime.Size = new System.Drawing.Size(94, 20);
             this.endTime.TabIndex = 35;
             // 
             // startTime
             // 
-            this.startTime.Location = new System.Drawing.Point(726, 83);
+            this.startTime.Location = new System.Drawing.Point(950, 80);
             this.startTime.Name = "startTime";
             this.startTime.Size = new System.Drawing.Size(94, 20);
             this.startTime.TabIndex = 34;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(900, 114);
+            this.button2.Location = new System.Drawing.Point(1129, 113);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(51, 23);
             this.button2.TabIndex = 33;
@@ -148,7 +165,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(826, 86);
+            this.label11.Location = new System.Drawing.Point(1055, 80);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(25, 13);
             this.label11.TabIndex = 30;
@@ -157,7 +174,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(692, 86);
+            this.label10.Location = new System.Drawing.Point(908, 83);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 13);
             this.label10.TabIndex = 30;
@@ -166,7 +183,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(557, 86);
+            this.label3.Location = new System.Drawing.Point(772, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 29;
@@ -175,7 +192,7 @@
             // dayComboBox
             // 
             this.dayComboBox.FormattingEnabled = true;
-            this.dayComboBox.Location = new System.Drawing.Point(587, 83);
+            this.dayComboBox.Location = new System.Drawing.Point(814, 79);
             this.dayComboBox.Name = "dayComboBox";
             this.dayComboBox.Size = new System.Drawing.Size(88, 21);
             this.dayComboBox.TabIndex = 28;
@@ -184,7 +201,7 @@
             // 
             this.docotorShedul.AutoSize = true;
             this.docotorShedul.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.docotorShedul.Location = new System.Drawing.Point(662, 45);
+            this.docotorShedul.Location = new System.Drawing.Point(771, 45);
             this.docotorShedul.Name = "docotorShedul";
             this.docotorShedul.Size = new System.Drawing.Size(134, 22);
             this.docotorShedul.TabIndex = 27;
@@ -400,28 +417,11 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Email";
             // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(38, 228);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
-            this.passwordLabel.TabIndex = 37;
-            this.passwordLabel.Text = "Password";
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Location = new System.Drawing.Point(112, 221);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(328, 20);
-            this.passwordTextBox.TabIndex = 38;
-            // 
             // DoctorRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 537);
+            this.ClientSize = new System.Drawing.Size(1311, 537);
             this.Controls.Add(this.doctorPanel);
             this.Name = "DoctorRegisterForm";
             this.Text = "Form1";

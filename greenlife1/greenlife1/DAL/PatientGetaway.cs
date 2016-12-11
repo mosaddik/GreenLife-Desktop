@@ -124,6 +124,7 @@ namespace greenlife1.DAL
 
 
 
+
         public List<Patient> GetSearchedPatients(string searchTerm)
         {
 

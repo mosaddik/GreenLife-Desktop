@@ -22,7 +22,7 @@ namespace greenlife1
         {
             InitializeComponent();
             CheckBox box;
-            var i = 110;
+            var i = 130;
             specialityManager.GetAll();
 
             foreach (var specility in specialityManager.GetAll())
@@ -31,7 +31,7 @@ namespace greenlife1
                 checkbox.Text = specility.Name;
                 checkbox.Name = specility.ID.ToString();
                 checkbox.AutoSize = true;
-                checkbox.Location = new Point(i, 368); //vertical
+                checkbox.Location = new Point(i, 420); //vertical
                 checkBoxs.Add(checkbox);
                 doctorPanel.Controls.Add(checkbox);
                 i = i + 50;

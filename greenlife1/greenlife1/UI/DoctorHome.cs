@@ -12,18 +12,19 @@ using Greenlife1;
 
 namespace greenlife1
 {
-    
+
     public partial class DoctorHome : Form
     {
         public Doctor Doctor { set; get; }
-        DoctorManager doctorManager =  new DoctorManager();
-        PatientManager patientManager =  new PatientManager();
-        PatientQueueManager patientQueueManager =  new PatientQueueManager();
+        DoctorManager doctorManager = new DoctorManager();
+        PatientManager patientManager = new PatientManager();
+        PatientQueueManager patientQueueManager = new PatientQueueManager();
         public List<Doctor> DoctorWithpatientQueue { set; get; }
         public string DoctorId { set; get; }
+
         public DoctorHome(string doctor)
         {
-            
+
             InitializeComponent();
             GridviewLoad(doctor);
             this.Doctor = new Doctor(doctor);
@@ -32,34 +33,37 @@ namespace greenlife1
 
             if (patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId) != null)
             {
-                QueueInfoLabel.Text = patientQueueManager.GetTodayQueueByDoctor(Doctor.DoctorId).Count.ToString();
-                QueueInfoLabel.Text = QueueInfoLabel.Text + "/" + patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId).QueueNo; 
+                QueueInfoLabel.Text = patientQueueManager.GetQueueByDoctor(Doctor).Count.ToString();
+                QueueInfoLabel.Text = QueueInfoLabel.Text + "/" +
+                                      patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId).QueueNo;
             }
-        
+
 
 
 
 
 
         }
+
         private void DoctorHome_Load(object sender, EventArgs e)
         {
-           
-           
+
+
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
-            var patient  = new PatientRegisterForm();
+            var patient = new PatientRegisterForm();
             patient.DoctorGUI = this;
         }
 
         private void GridviewLoad(string doctor)
         {
-         
 
 
-         }
+
+        }
 
         private void waitingPatientGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -69,21 +73,21 @@ namespace greenlife1
         private void callPatient_Click(object sender, EventArgs e)
         {
 
-            if (patientQueueManager.DequePatient(Doctor.DoctorId) != null)
+            try
             {
-                var patient = patientQueueManager.DequePatient(Doctor.DoctorId);
-                PatientNameLabel.Text = patient.Name;
+                patientQueueManager.DequePatient(Doctor.DoctorId);
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("No Patient in QUEUE");
+
+                MessageBox.Show("No Data on Queue");
             }
          
             Doctor.LoadGridVIew(Doctor.DoctorId,waitingPatientGrid,patientQueueManager,patientManager);
 
             if (patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId) != null)
             {
-                QueueInfoLabel.Text = patientQueueManager.GetTodayQueueByDoctor(Doctor.DoctorId).Count.ToString();
+                QueueInfoLabel.Text = patientQueueManager.GetQueueByDoctor(Doctor).Count.ToString();
                 QueueInfoLabel.Text = QueueInfoLabel.Text + "/" + patientQueueManager.GetTopOfTheQueue(Doctor.DoctorId).QueueNo;
             }
 

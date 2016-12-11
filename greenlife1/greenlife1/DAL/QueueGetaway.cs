@@ -40,7 +40,8 @@ namespace greenlife1.DAL
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "select * from [Patient_Queue] where doctor_Id='" + doctor.DoctorId + "'";
+            string query = "select * from [Patient_Queue] where date BETWEEN '" + DateTime.Today.ToString("dd-MM-yyyy") +
+                           "' AND  '" + DateTime.Today.AddDays(1).AddSeconds(-1).ToString("dd-MM-yyyy") + "' AND doctor_id='"+doctor.DoctorId+"' ";
             SqlCommand command = new SqlCommand(query, connection);
             List<PatientQueue> patientQueues = new List<PatientQueue>();
             SqlDataReader reader = command.ExecuteReader();

@@ -47,7 +47,7 @@
             // 
             // searchPatientText
             // 
-            this.searchPatientText.Location = new System.Drawing.Point(472, 77);
+            this.searchPatientText.Location = new System.Drawing.Point(1016, 77);
             this.searchPatientText.Name = "searchPatientText";
             this.searchPatientText.Size = new System.Drawing.Size(205, 20);
             this.searchPatientText.TabIndex = 1;
@@ -58,14 +58,14 @@
             this.viewPatientGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.viewPatientGrid.Location = new System.Drawing.Point(63, 130);
             this.viewPatientGrid.Name = "viewPatientGrid";
-            this.viewPatientGrid.Size = new System.Drawing.Size(706, 221);
+            this.viewPatientGrid.Size = new System.Drawing.Size(1279, 458);
             this.viewPatientGrid.TabIndex = 2;
             this.viewPatientGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewPatientGrid_CellClick);
             this.viewPatientGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewPatientGrid_CellContentClick);
             // 
             // searchPatientButton
             // 
-            this.searchPatientButton.Location = new System.Drawing.Point(694, 77);
+            this.searchPatientButton.Location = new System.Drawing.Point(1257, 77);
             this.searchPatientButton.Name = "searchPatientButton";
             this.searchPatientButton.Size = new System.Drawing.Size(75, 23);
             this.searchPatientButton.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 424);
+            this.ClientSize = new System.Drawing.Size(1362, 503);
             this.Controls.Add(this.searchPatientButton);
             this.Controls.Add(this.viewPatientGrid);
             this.Controls.Add(this.searchPatientText);
